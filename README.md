@@ -46,4 +46,7 @@ for index, game in enumerate(filtered_games):
     print(f"{index + 1}. {game['title']}")
 ```
 
+## UML sequence diagram
+
+<img width="556" alt="image" src="https://github.com/user-attachments/assets/2c6ee14f-b06d-4800-bbe0-af57e0600040">
 

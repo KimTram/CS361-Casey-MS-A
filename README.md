@@ -15,7 +15,7 @@ To request data from the microservice, follow these steps:
 3. Send the number of players as a string message.
 
 #### Example Request
-# python
+```python
 import zmq
 
 # ZeroMQ context
@@ -28,6 +28,7 @@ socket.connect("tcp://localhost:5555")
 # Send the number of players to the server
 num_players = "4"
 socket.send_string(num_players)
+```
 
 ### Receiving Data
 To receive data from the microservice, follow these steps:
@@ -36,13 +37,13 @@ Wait for the response from the microservice.
 The response will be a JSON array of filtered games.
 
 #### Example Response
-# python
+```python
 # Receive the filtered list of games
 filtered_games = socket.recv_json()
 
 print("Filtered Games:")
-for game in filtered_games:
-    print(f"- {game['title']}")
-
+for index, game in enumerate(filtered_games):
+    print(f"{index + 1}. {game['title']}")
+```
 
 
